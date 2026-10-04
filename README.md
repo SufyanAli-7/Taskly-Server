@@ -469,7 +469,7 @@ This server is production-ready for deployment on platforms like **Render**, **R
 
 - **Author:** Sufyan Ali
 - **GitHub:** [@SufyanAli-7](https://github.com/SufyanAli-7)
-- **Project:** Taskly Taskly Server
+- **Project:** Taskly Server
 
 ---
 
