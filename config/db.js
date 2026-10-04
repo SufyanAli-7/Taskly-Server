@@ -1,7 +1,8 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
 const connectDB = () => {
-    mongoose.connect("mongodb+srv://<username>:<password>@cluster.mongodb.net/taskly?retryWrites=true&w=majority")
+    mongoose.connect(process.env.MONGODB_URI)
         .then(() => {
             console.log('Connected to MongoDB');
         }).catch((err) => {
