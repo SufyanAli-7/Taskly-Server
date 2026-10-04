@@ -441,7 +441,17 @@ sequenceDiagram
 
 This server is production-ready for deployment on platforms like **Render**, **Railway**, **Fly.io**, or **Heroku**:
 
-### Deploying to Render
+### Deploying to Vercel (Serverless)
+1. Import your `Taskly-Server` GitHub repository into **[Vercel](https://vercel.com/)**.
+2. Vercel will automatically detect `vercel.json` for Serverless Node.js functions.
+3. In **Settings -> Environment Variables**, add your keys:
+   - `MONGODB_URI`: `<Your MongoDB URI>`
+   - `CLOUDINARY_CLOUD_NAME`: `<Your Cloud Name>`
+   - `CLOUDINARY_API_KEY`: `<Your API Key>`
+   - `CLOUDINARY_API_SECRET`: `<Your API Secret>`
+4. Click **Deploy**. Vercel will give you a production HTTPS URL (e.g., `https://taskly-server.vercel.app`).
+
+### Deploying to Render / Railway
 1. Create a new **Web Service** and connect your GitHub repository.
 2. Set Environment to **Node**.
 3. Set **Build Command**: `npm install`
