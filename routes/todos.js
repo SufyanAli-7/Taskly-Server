@@ -1,7 +1,7 @@
 const express = require('express');
 const multer = require('multer');
 const { verifyToken } = require('../middlewares/auth');
-const Todos = require('../models/Todos');
+const Todos = require('../models/todos');
 const getRandomId = require('../config/global');
 const cloudinary = require('../config/cloudinary');
 
