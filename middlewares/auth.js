@@ -9,7 +9,8 @@ const verifyToken = (req, res, next) => {
         return res.status(401).json({ message: 'Access denied. No token provided.', isError: true });
     }
 
-    jwt.verify(token, "ali", (err, decoded) => {
+    const jwtSecret = process.env.JWT_SECRET || "ali";
+    jwt.verify(token, jwtSecret, (err, decoded) => {
         if (!err) {
             req.uid = decoded.uid;
             next();
