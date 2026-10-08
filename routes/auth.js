@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
         if (match) {
 
             const jwtSecret = process.env.JWT_SECRET || "ali";
-            const token = jwt.sign({ uid }, jwtSecret, { expiresIn: '1d' });
+            const token = jwt.sign({ uid: user.uid }, jwtSecret, { expiresIn: '1d' });
             res.status(200).json({ message: 'Login successful', token });
 
         }
